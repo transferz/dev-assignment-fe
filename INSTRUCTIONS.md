@@ -8,7 +8,7 @@ The data model for the assignment has the following structure:
 **Some remarks**:
 - The `id` and `created_at` fields are auto-generated. You don't need to provide them when creating a new journey.
 - The `inbound` field is `true` if the journey is address-to-airport, and `false` (meaning it is an outbound journey) if airport-to-address.
-- The `status` field value is always one of: `PENDING` | `COMPLETED`.
+- The `status` field value is always one of: `PENDING` | `COMPLETED` | `CANCELLED` | `IN PROGRESS`.
 
 ### Deliverables
 1. Fork the repository to work on the assignment.
@@ -20,8 +20,8 @@ The data model for the assignment has the following structure:
 1. Explore the app to get a grasp of how to communicate with the API.
 1. The app contains a **GraphiQL** client, with the schema documentation and a playground, that allows you to explore the API in order to craft the queries/mutations you need to use.
 1. In the journey page, fetch all journeys from the API using the Apollo client and display them neatly on the page.
-1. Add a text input that can filter journeys by name.
-1. Add a dropdown that can filter journeys by status (`PENDING` | `COMPLETED` | `ALL`).
+1. Add a text input that can filter journeys either by traveler `first_name` / `last name` or by `from_address` / `to_address`. You can choose either one of the filters or filter by all of those fields.
+1. Add a dropdown that can filter journeys by status (`PENDING` | `COMPLETED` | `CANCELLED` | `IN PROGRESS` | `ALL`).
 1. You may use this `inbound` field value (explained above) to enhance the user experience for the driver in any way you see fit. 
 1. Create unit tests for the important functionality that you have added. 
 1. You should use `scss` for some basic styling to make the interface look neat
